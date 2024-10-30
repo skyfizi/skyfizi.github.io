@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    margin: 0;
+    padding: 20px;
+    color: #fff;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+h1 {
+    color: #007bff;
+}
+
+p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.info-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2em;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.character-button {
+    font-size: 1.2em; /* Размер кнопок выбора персонажей */
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0; /* Отступ между кнопками */
+    width: 100%; /* Ширина кнопок 100% */
+}
+
+.character-button:hover {
+    background-color: #218838;
+}
+
+.character-name-icon {
+    display: flex;
+    align-items: center;
+}
+
+.character-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.back-button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.back-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}

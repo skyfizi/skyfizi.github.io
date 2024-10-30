@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация о персонаже</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="info-button" onclick="showInfo()" class="info-button">Info</button>
+    
+    <div class="container" id="character-info" style="display: none;">
+        <h1 id="character-selection-header">Выберите персонажа</h1>
+        <div id="character-buttons" style="display: block;">
+            <button class="character-button" onclick="selectCharacter('Alma Killa')">Alma Killa</button>
+            <button class="character-button" onclick="selectCharacter('Alma Kila')">Alma Kila</button>
+            <button class="character-button" onclick="selectCharacter('Shaun Delmoto')">Shaun Delmoto</button>
+        </div>
+        <div id="character-details" style="display: none;">
+            <h2>Информация о персонаже:</h2>
+            <div class="character-name-icon">
+                <p id="character-name"></p>
+                <img id="character-icon" src="" alt="Иконка персонажа" class="character-icon" title="">
+            </div>
+            <p><strong>StaticID:</strong> <span id="static-id"></span></p>
+            <p><strong>Номер телефона:</strong> <span id="phone-number"></span></p>
+            <p><strong>Номер банка:</strong> <span id="bank-number"></span></p>
+            <button id="back-button" onclick="goBack()" class="back-button" style="display: none;">
+                <img src="back.png" alt="Назад" class="back-icon">
+            </button>
+        </div>
+    </div>
+    
+    <button id="home-button" style="display: none;" onclick="goHome()" class="home-button">
+        <img src="image.png" alt="Домой" style="width: 30px; height: 30px;">
+    </button>
+
+    <script>
+        function showInfo() {
+            document.getElementById('info-button').style.display = 'none';
+            document.getElementById('character-info').style.display = 'block';
+            document.getElementById('home-button').style.display = 'block';
+        }
+
+        function selectCharacter(characterName) {
+            document.getElementById('character-selection-header').style.display = 'none';
+            document.getElementById('character-buttons').style.display = 'none';
+            document.getElementById('character-details').style.display = 'block';
+            document.getElementById('back-button').style.display = 'inline-flex';
+
+            document.getElementById('character-name').innerText = characterName;
+
+            if (characterName === 'Alma Killa') {
+                document.getElementById('character-icon').src = 'vb_green.png';
+                document.getElementById('character-icon').title = 'Военный билет';
+                document.getElementById('static-id').innerText = '40413';
+                document.getElementById('phone-number').innerText = '75385165';
+                document.getElementById('bank-number').innerText = '20395';
+            } else if (characterName === 'Alma Kila') {
+                document.getElementById('character-icon').src = 'vb_red.png';
+                document.getElementById('character-icon').title = 'Военный билет';
+                document.getElementById('static-id').innerText = '62020';
+                document.getElementById('phone-number').innerText = '22314801';
+                document.getElementById('bank-number').innerText = '39313';
+            } else if (characterName === 'Shaun Delmoto') {
+                document.getElementById('character-icon').src = 'vb_red.png';
+                document.getElementById('character-icon').title = 'Военный билет';
+                document.getElementById('static-id').innerText = '73259';
+                document.getElementById('phone-number').innerText = '80500889';
+                document.getElementById('bank-number').innerText = '48866';
+            }
+        }
+
+        function goBack() {
+            document.getElementById('character-selection-header').style.display = 'block';
+            document.getElementById('character-buttons').style.display = 'block';
+            document.getElementById('character-details').style.display = 'none';
+            document.getElementById('back-button').style.display = 'none';
+        }
+
+        function goHome() {
+            document.getElementById('info-button').style.display = 'block';
+            document.getElementById('character-info').style.display = 'none';
+            document.getElementById('character-selection-header').style.display = 'block';
+            document.getElementById('character-buttons').style.display = 'block';
+            document.getElementById('character-details').style.display = 'none';
+            document.getElementById('home-button').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
